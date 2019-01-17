@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+  - name: instalar dependencias
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+   - unzip
+   - java-1.7.0-openjdk
+   - vim
